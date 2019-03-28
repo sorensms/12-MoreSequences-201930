@@ -19,7 +19,7 @@ def main():
     run_test_make_less_simple_string()
 
     # -------------------------------------------------------------------------
-    # TODO: 8. Uncomment the tests below before working _TODO_ 9.
+    # Done: 8. Uncomment the tests below before working _TODO_ 9.
     #   They launch annoying rg.RoseWindows on each run that you don't want
     #   until you get to _TODO_ 9 and _TODO_ 10.
     # -------------------------------------------------------------------------
@@ -406,12 +406,12 @@ def rectangles_from_circles(circles):
     #            in this function, so DON'T draw anything in here!
     ###########################################################################
     # -------------------------------------------------------------------------
-    sequence=[]
+    sequence=()
     for k in range (len(circles)):
         upperleft=rg.Point(circles[k].center.x-circles[k].radius,circles[k].center.y-circles[k].radius)
         lowerright=rg.Point(circles[k].center.x+circles[k].radius,circles[k].center.y+circles[k].radius)
         rectangle=rg.Rectangle(upperleft, lowerright)
-        sequence=sequence+rectangle
+        sequence=sequence+tuple(rectangle(k))
     return sequence
 
 # -----------------------------------------------------------------------------
